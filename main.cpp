@@ -1,9 +1,9 @@
-//
-//  main.cpp
-//  simplified_nat
-//
-//  Created by Indira Bobburi.
-//
+/*
+ *  main.cpp
+ *  simplified_nat
+ *
+ *  Created by Indira Bobburi.
+ */
 
 #include <iostream>
 #include <fstream>
@@ -18,7 +18,7 @@ const string OUTPUT_FILE = "output/OUTPUT.txt";
 
 int main(int argc, const char * argv[]) {
     
-    // Open the input NAT file.
+    /* Open the input NAT file.*/
     ifstream input;
     input.open(INPUT_NAT_FILE);
     if (input.fail())
@@ -30,12 +30,12 @@ int main(int argc, const char * argv[]) {
     Trie* tree = new Trie();
     string line;
     while(getline(input, line)) {
-       // cout << line << endl;
+       /* cout << line << endl;*/
         tree->insert(line);
     }
     input.close();
     
-    // Open input Flow file
+    /* Open input Flow file */
     input.open(INPUT_FLOW_FILE);
     if (input.fail())
     {
@@ -45,12 +45,12 @@ int main(int argc, const char * argv[]) {
     
     std::string result;
     
-    //output file handler
+    /*output file handler*/
     ofstream output;  
     output.open(OUTPUT_FILE);  
     
     while(getline(input, line)) {
-        //cout << line << endl;
+        /*cout << line << endl;*/
         result = "";
         bool success = tree->search(line, result);
         if(success && !result.empty()) {
