@@ -1,0 +1,5 @@
+#output files from g++
+*.o
+*.out
+#mac files
+.DS_Store
