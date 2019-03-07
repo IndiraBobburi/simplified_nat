@@ -8,7 +8,7 @@ g++ -Wall main.cpp TrieNode.cpp -o main
 ./main
 ```
 
-## Assumptions made
+## Assumptions
 1. Format will be valid in NAT and FLOW file
 2. If for an entry in FLOW file which has matched from NAT file (such as ip:port, ip:*, *:port), result for that matches has the priority order: ip:port > ip:* > *:port
 3. Entire NAT file will be fit into the memory in the Trie datastructure.
